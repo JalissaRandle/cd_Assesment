@@ -1,16 +1,15 @@
-let array = [28, 43, -12, 30, 4, 0, 12]
+function hasuniquechars (str){
+    let letters = {}
 
-
-let value = "False"
-for (let i = 0; i < array.length; i++) {
-  for (let j = 0; j < array.length; j++) {
-    if (i !== j) {
-      if (array[i] + array[j] === 0) {
-        value = "True"
-      } 
+    for (let i = 0; i < str.length; i++){
+        if(letters[str[i]] = 1){
+            return false
+        }else{
+            letter[str[i]] = 1
+        }   console.log(letter)
     }
-  }
+    return true
 }
 
-console.log(value)
-//o(n2)
+console.log(hasuniquechars('monday'))
+//o(n)
