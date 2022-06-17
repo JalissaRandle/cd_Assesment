@@ -1,9 +1,14 @@
 //o(n)
-
-function findLongest (arr){
-    arr.sort((a,b) => b.length - a,lengthj)
-    return arr[0].lenth
-
+function findLongestWord(array) {
+    var longestWord = "";
+  
+    array.forEach(function(word) {
+      if(word.length > longestWord.length) {
+        longestWord = word
+      }
+    });
+  
+    return longestWord
 }
 
-console.loh(findLongest(["hi", "jalissa"]))
+let word = findLongestWord(['billy', 'song', 'settings'])

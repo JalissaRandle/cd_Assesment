@@ -1,15 +1,14 @@
-function hasuniquechars (str){
-    let letters = {}
-
-    for (let i = 0; i < str.length; i++){
-        if(letters[str[i]] = 1){
-            return false
-        }else{
-            letter[str[i]] = 1
-        }   console.log(letter)
+function hasUniqueChars(str) {
+    for (let i = 0; i < str.length - 1; i++) {
+        for (let j = i + 1; j < str.length; j++) {
+        if (str[i] === str[j]) {
+            console.log('false')
+        }
+        }
     }
-    return true
+    console.log('true');
 }
 
-console.log(hasuniquechars('monday'))
-//o(n)
+hasUniqueChars('boo')
+
+// O(n^2) 

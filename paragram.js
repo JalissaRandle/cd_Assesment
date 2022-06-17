@@ -1,27 +1,14 @@
-function isPalngram(word) {
-    let j = word.length - 1
-    for (let i = 0; i < (word.length - 1) / 2; i++) {
-      if (word[i] !== word[j]) {
-        return false
-      }
-      j--
+function isPangram(string){
+  let strArr = string.toLowerCase();
+  let alphabet = 'abcdefghijklmnopqrstuvwxyz'.split('');
+  
+  for (let i = 0; i < alphabet.length; i++) {
+    if(strArr.indexOf(alphabet[i]) < 0){
+      return false;
     }
-    return true
   }
-  // o(n)
+  return true;
+}
+isPalngram('the dog cat')
 
-  function isPalngram(str){
-      let alplabet = 'abcdefghijklnopqrstuvwxyz'
-      let regex = /\s/g;
-      let lowercase = str.toLowerCase.replace(regex, "")
-      console.log(lowecase, "original", str)
-
-      for(let i = o; i < alplabet.length; i++){
-          if(lowercase.indexOf(alplabet[i]) === -1){
-              return false
-          }
-      }
-      return true
-  }
-
-  isPalngram("the dog took a walk")
+ // o(n)
